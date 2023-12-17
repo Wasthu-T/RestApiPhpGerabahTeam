@@ -2,6 +2,8 @@
 2. paste file kesana
 
 Kurang :
+Laporan 
+PPT
 Navigasi bar
 Footer
 Form tambah data
