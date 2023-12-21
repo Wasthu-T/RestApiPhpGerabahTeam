@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand  fs-3"href="#">Gerabah</a>
+        <a class="navbar-brand  fs-3"href="main.php">Gerabah</a>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
