@@ -1,5 +1,5 @@
 <?php
-// Koneksi ke database
+//koneksi ke database
 $host = 'localhost';
 $user = 'root';
 $pass = '';
@@ -11,14 +11,14 @@ if (!$connection) {
     die("Koneksi gagal: " . mysqli_connect_error());
 }
 
-// Ambil data yang dikirimkan dari formulir
+//ambil data yang dikirimkan dari form
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama_mhs = $_POST['nama_mhs'];
     $email = $_POST['email'];
     $jurusan = $_POST['jurusan'];
 
 
-    //Cek email duplikat
+    //cek email duplikat
     $check_query = "SELECT * FROM data WHERE email = '$email'";
     $check_result = mysqli_query($connection, $check_query);
 
@@ -27,15 +27,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }    
 
-    // Query untuk menyimpan data ke database
+    //query untuk menyimpan data ke database
     $query = "INSERT INTO data (nama_mhs, email, jurusan) VALUES ('$nama_mhs', '$email', '$jurusan')";
 
+    //alert
     if (mysqli_query($connection, $query)) {
-        // Jika berhasil menyimpan, arahkan kembali ke halaman utama atau tampilkan pesan sukses
         echo "<script>alert('Data berhasil disimpan!'); window.location='main.php';</script>";
         exit;
     } else {
-        // Jika gagal, tampilkan pesan error
         echo "Gagal menyimpan data: " . mysqli_error($connection);
     }
 }
