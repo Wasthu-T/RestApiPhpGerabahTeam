@@ -30,7 +30,13 @@ $data = query("SELECT * FROM data");
                         </div>
                         <div class="mb-3">
                             <label for="jurusan" class="form-label">Jurusan :</label>
-                            <input type="text" class="form-control" name="jurusan" required>
+                            <select class="form-select" name="jurusan"required>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Sistem Informasi">Sistem Informasi</option>
+                                <option value="Teknik Mesin">Teknik Mesin</option>
+                                <option value="Menejemen">Menejemen</option>
+                                <option value="Teknik Sipil">Teknik Sipil</option>
+                            </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Kirim</button>
                     </form>
