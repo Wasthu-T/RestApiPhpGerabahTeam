@@ -4,8 +4,5 @@
 Kurang :
 Laporan 
 PPT
-Navigasi bar
-Footer
-Form tambah data
 Form Update MYSQL
-Fungsi Delete, Create, Update MYSQL,
+Fungsi Delete, Update MYSQL
