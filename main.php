@@ -32,7 +32,7 @@ $data = query("SELECT * FROM data");
                     <td><?= $dat["jurusan"]; ?></td>
                     <td>
                         <a href="update.php?id=<?= $dat['id']; ?>" class="btn btn-sm btn-warning">Ubah</a>
-                        <a href="delete.php?id=<?= $dat['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin untuk menghapus data ini?')">Hapus</a>
+                        <a href="delete.php?id=<?= $dat['id']; ?>" class="btn btn-sm btn-danger">Hapus</a>
                     </td>
                 </tr>
                 <?php $i++; ?>
@@ -41,6 +41,7 @@ $data = query("SELECT * FROM data");
     </table>
     <div class="d-flex justify-content-center">
         <a href="create.php" class="btn btn-primary">Tambah Data</a>
+        <a href="delete_all.php" class="btn btn-danger ml-2" style="margin-left: 10px !important;" onclick="return confirm('Apakah Anda yakin untuk menghapus semua data?')">Hapus Semua Data</a>
     </div>
 </div>
 <?php $content = ob_get_clean(); ?>

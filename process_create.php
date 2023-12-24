@@ -1,15 +1,7 @@
 <?php
-//koneksi ke database
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$db   = 'test_restapi';
 
-$connection = mysqli_connect($host, $user, $pass, $db);
+require('connection.php');
 
-if (!$connection) {
-    die("Koneksi gagal: " . mysqli_connect_error());
-}
 
 //ambil data yang dikirimkan dari form
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -19,11 +11,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     //cek email duplikat
-    $check_query = "SELECT * FROM data WHERE email = '$email'";
+    $check_query = "SELECT * FROM data WHERE email = '$email' AND nama_mhs = '$nama_mhs'";
     $check_result = mysqli_query($connection, $check_query);
 
     if (mysqli_num_rows($check_result) > 0) {
-        echo"<script>alert('Email sudah terdaftar!'); window.location='create.php';</script>";
+        echo"<script>alert('Email & Nama sudah terdaftar!'); window.location='create.php';</script>";
         exit;
     }    
 
