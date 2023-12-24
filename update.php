@@ -66,9 +66,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     Informasi Data Sekarang
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title mb-4" style="text-decoration: underline;"><?= $data['nama_mhs']; ?></h5> <!-- Menambahkan margin bawah -->
-                    <p class="card-text mb-3">Email: <?= $data['email']; ?></p> <!-- Menambahkan margin bawah -->
-                    <p class="card-text mb-3">Jurusan: <?= $data['jurusan']; ?></p> <!-- Menambahkan margin bawah -->
+                    <h5 class="card-title mb-4" style="text-decoration: underline;"><?= $data['nama_mhs']; ?></h5>
+                    <p class="card-text mb-3">Email: <?= $data['email']; ?></p>
+                    <p class="card-text mb-3">Jurusan: <?= $data['jurusan']; ?></p>
                 </div>
             </div>
         </div>

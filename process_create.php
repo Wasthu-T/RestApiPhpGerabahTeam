@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }    
 
-    //query untuk menyimpan data ke database
+    //query buat data 
     $query = "INSERT INTO data (nama_mhs, email, jurusan) VALUES ('$nama_mhs', '$email', '$jurusan')";
 
     //alert
