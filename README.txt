@@ -4,5 +4,4 @@
 Kurang :
 Laporan 
 PPT
-Form Update MYSQL
-Fungsi Delete, Update MYSQL
+
